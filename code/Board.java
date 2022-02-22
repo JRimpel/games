@@ -1,5 +1,4 @@
 package code;
-
 public class Board {
     private Checker[][] board;
     public Board(){
@@ -29,6 +28,5 @@ public class Board {
             }
         }    
         return print;
-
     }
 }

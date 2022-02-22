@@ -1,5 +1,4 @@
 package code;
-
 public class Checker {
     private boolean king, alive;
     private int position;
@@ -52,5 +51,4 @@ public class Checker {
             return "[o]"; 
         return "";
     }
-
 }
