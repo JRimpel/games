@@ -4,11 +4,16 @@ public class Checker {
     private boolean king, alive;
     private int position;
     private String color;
-    public Checker(int position, String color){
+    public Checker(int position){
+        alive = false; 
+        this.position = position;
         king = false;
-        alive = false;
+    }
+    public Checker(int position, String color, boolean alive){
+        king = false;
         this.position = position;
         this.color = color;
+        this.alive = alive;
     }
     public void setKing(boolean king){
         this.king = king;
@@ -35,6 +40,17 @@ public class Checker {
         return color;
     }
     public String toString(){
-        
+        if (king && alive && color.equals("white"))
+            return "[X]";
+        else if (king == false && alive && color.equals("white"))
+            return "[x]";
+        else if (alive == false)
+            return "[ ]";
+        else if (king && alive && color.equals("black"))    
+            return "[O]";
+        else if (king == false && alive && color.equals("black"))
+            return "[o]"; 
+        return "";
     }
+
 }
